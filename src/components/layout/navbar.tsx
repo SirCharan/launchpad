@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
-import {Menu, Rocket, Wallet} from 'lucide-react';
+import {Menu, Flame, Wallet} from 'lucide-react';
 import {useState} from 'react';
 import {Button} from '~/components/ui/button';
 import {Sheet, SheetContent, SheetTrigger} from '~/components/ui/sheet';
@@ -32,10 +32,10 @@ export function Navbar({onConnectWallet, isConnected, address}: NavbarProps) {
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <Rocket className="h-4 w-4 text-primary-foreground" />
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary primary-glow-pulse">
+            <Flame className="h-4 w-4 text-primary-foreground" />
           </div>
-          <span className="text-lg font-bold hidden sm:block">Timelock</span>
+          <span className="text-lg font-bold font-mono hidden sm:block tracking-tight">fuckpump.fun</span>
         </Link>
 
         {/* Desktop Navigation */}

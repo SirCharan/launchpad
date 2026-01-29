@@ -47,7 +47,7 @@ export function TokenCard({token}: TokenCardProps) {
               <p
                 className={cn(
                   'text-xs font-medium flex items-center gap-0.5',
-                  isPositive ? 'text-green-500' : 'text-red-500',
+                  isPositive ? 'text-chart-1' : 'text-destructive',
                 )}
               >
                 {isPositive ? (
@@ -85,9 +85,9 @@ export function TokenCard({token}: TokenCardProps) {
                 <div
                   className={cn(
                     'h-full rounded-full transition-all',
-                    phase === 'live' && 'bg-green-500',
-                    phase === 'upcoming' && 'bg-blue-500',
-                    phase === 'settling' && 'bg-yellow-500',
+                    phase === 'live' && 'bg-primary',
+                    phase === 'upcoming' && 'bg-chart-2',
+                    phase === 'settling' && 'bg-chart-4',
                   )}
                   style={{width: `${token.auctionState.progress}%`}}
                 />

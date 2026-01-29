@@ -9,8 +9,8 @@ import {
   ImagePlus,
   Info,
   Loader2,
-  Rocket,
-  Sparkles,
+  Flame,
+  Zap,
 } from 'lucide-react';
 import {Container} from '~/components/layout';
 import {Button} from '~/components/ui/button';
@@ -100,13 +100,13 @@ export default function LaunchPage() {
       <Container size="sm">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-4">
-            <Sparkles className="h-3.5 w-3.5" />
-            Fair Launch with CCA
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 font-mono">
+            <Zap className="h-3.5 w-3.5" />
+            CCA — No snipers
           </div>
-          <h1 className="text-2xl font-bold">Launch Your Token</h1>
+          <h1 className="text-2xl font-bold font-mono">Launch Your Token</h1>
           <p className="text-sm text-muted-foreground mt-1">
-            Continuous Clearing Auction for fair price discovery
+            Continuous clearing auction. Fair price or rekt.
           </p>
         </div>
 
@@ -503,7 +503,7 @@ export default function LaunchPage() {
                     </>
                   ) : (
                     <>
-                      <Rocket className="h-4 w-4" />
+                      <Flame className="h-4 w-4" />
                       Launch Auction
                     </>
                   )}
@@ -514,8 +514,8 @@ export default function LaunchPage() {
         )}
 
         {/* Footer note */}
-        <p className="text-center text-xs text-muted-foreground mt-6">
-          Powered by Uniswap V4 Continuous Clearing Auctions
+        <p className="text-center text-xs text-muted-foreground mt-6 font-mono">
+          fuckpump.fun — Uniswap V4 CCA
         </p>
       </Container>
     </div>

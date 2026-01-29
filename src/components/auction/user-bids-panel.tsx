@@ -337,13 +337,13 @@ export function UserBidsPanel({
 
         <div className="p-4 rounded-xl border border-border bg-card">
           <div className="flex items-center gap-2 text-muted-foreground mb-2">
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-primary" />
             <span className="text-xs font-medium">Active Bids</span>
           </div>
           <p className="text-xl font-bold tabular-nums">{stats.activeBids}</p>
           <p className="text-xs text-muted-foreground">
             {stats.outOfRangeBids > 0 ? (
-              <span className="text-orange-500">
+                <span className="text-chart-4">
                 {stats.outOfRangeBids} out of range
               </span>
             ) : (
@@ -354,7 +354,7 @@ export function UserBidsPanel({
 
         <div className="p-4 rounded-xl border border-border bg-card">
           <div className="flex items-center gap-2 text-muted-foreground mb-2">
-            <Clock className="h-4 w-4 text-yellow-500" />
+            <Clock className="h-4 w-4 text-chart-4" />
             <span className="text-xs font-medium">Settling</span>
           </div>
           <p className="text-xl font-bold tabular-nums">

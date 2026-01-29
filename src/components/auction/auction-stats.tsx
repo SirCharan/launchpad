@@ -16,7 +16,7 @@ export function AuctionStats({config, state, className}: AuctionStatsProps) {
       label: 'Raised',
       value: `${parseFloat(state.totalRaised).toFixed(2)} ETH`,
       icon: TrendingUp,
-      color: 'text-green-500',
+      color: 'text-primary',
     },
     {
       label: 'Sold',
@@ -29,13 +29,13 @@ export function AuctionStats({config, state, className}: AuctionStatsProps) {
       label: 'Bidders',
       value: state.bidderCount.toLocaleString(),
       icon: Users,
-      color: 'text-blue-500',
+      color: 'text-chart-2',
     },
     {
       label: 'FDV',
       value: `$${formatNumber(parseFloat(state.currentPrice) * 2500 * 1000000000)}`,
       icon: Target,
-      color: 'text-yellow-500',
+      color: 'text-chart-4',
     },
   ];
 

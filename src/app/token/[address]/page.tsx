@@ -107,9 +107,9 @@ export default function TokenPage() {
       <div className="py-6 md:py-8">
         <Container>
           <div className="flex flex-col items-center justify-center py-16">
-            <h1 className="text-xl font-bold">Token Not Found</h1>
+            <h1 className="text-xl font-bold font-mono">Token Not Found</h1>
             <p className="text-muted-foreground mt-1 text-sm">
-              This token doesn't exist.
+              Doesn't exist. Or you're rekt.
             </p>
             <Link href="/discover" className="mt-4">
               <Button>Back to Discover</Button>
@@ -164,7 +164,7 @@ export default function TokenPage() {
                         >
                           {address.slice(0, 6)}...{address.slice(-4)}
                           {copied ? (
-                            <Check className="h-3 w-3 text-green-500" />
+                            <Check className="h-3 w-3 text-primary" />
                           ) : (
                             <Copy className="h-3 w-3" />
                           )}
@@ -252,8 +252,8 @@ export default function TokenPage() {
                       className={cn(
                         'text-sm font-medium',
                         token.stats.priceChange24h >= 0
-                          ? 'text-green-500'
-                          : 'text-red-500',
+                          ? 'text-chart-1'
+                          : 'text-destructive',
                       )}
                     >
                       {token.stats.priceChange24h >= 0 ? '+' : ''}
@@ -338,9 +338,9 @@ export default function TokenPage() {
                               <span
                                 className={cn(
                                   'text-xs font-medium px-2 py-0.5 rounded',
-                                  trade.type === 'buy'
-                                    ? 'bg-green-500/10 text-green-500'
-                                    : 'bg-red-500/10 text-red-500',
+                                    trade.type === 'buy'
+                                    ? 'bg-chart-1/20 text-chart-1'
+                                    : 'bg-destructive/20 text-destructive',
                                 )}
                               >
                                 {trade.type.toUpperCase()}

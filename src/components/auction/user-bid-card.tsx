@@ -103,9 +103,9 @@ export function UserBidCard({
     if (bid.phase === 'settling') {
       return {
         label: 'Settling',
-        color: 'text-yellow-500',
-        bgColor: 'bg-yellow-500/10',
-        borderColor: 'border-yellow-500/20',
+        color: 'text-chart-4',
+        bgColor: 'bg-chart-4/10',
+        borderColor: 'border-chart-4/20',
         icon: Clock,
         description: 'Auction is finalizing',
       };
@@ -123,18 +123,18 @@ export function UserBidCard({
     if (bid.inRange) {
       return {
         label: 'In Range',
-        color: 'text-green-500',
-        bgColor: 'bg-green-500/10',
-        borderColor: 'border-green-500/20',
+        color: 'text-primary',
+        bgColor: 'bg-primary/10',
+        borderColor: 'border-primary/20',
         icon: CheckCircle2,
         description: 'Your bid is competitive',
       };
     }
     return {
       label: 'Out of Range',
-      color: 'text-orange-500',
-      bgColor: 'bg-orange-500/10',
-      borderColor: 'border-orange-500/20',
+      color: 'text-destructive',
+      bgColor: 'bg-destructive/10',
+      borderColor: 'border-destructive/20',
       icon: AlertCircle,
       description: 'Price has exceeded your max',
     };
@@ -253,7 +253,7 @@ export function UserBidCard({
           <div className="mt-3 flex items-center gap-2">
             <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
               <div
-                className="h-full bg-green-500 transition-all duration-1000"
+                className="h-full bg-primary transition-all duration-1000"
                 style={{width: `${100 - bid.progress}%`}}
               />
             </div>
@@ -323,9 +323,9 @@ export function UserBidCard({
           </div>
           <div className="flex items-center gap-1 mt-0.5">
             {bid.priceChange > 0 ? (
-              <TrendingUp className="h-3 w-3 text-red-500" />
+              <TrendingUp className="h-3 w-3 text-chart-1" />
             ) : bid.priceChange < 0 ? (
-              <TrendingDown className="h-3 w-3 text-green-500" />
+              <TrendingDown className="h-3 w-3 text-destructive" />
             ) : (
               <Minus className="h-3 w-3 text-muted-foreground" />
             )}

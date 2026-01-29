@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {Rocket} from 'lucide-react';
+import {Flame} from 'lucide-react';
 import {Separator} from '~/components/ui/separator';
 
 export function Footer() {
@@ -11,12 +11,12 @@ export function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <Rocket className="h-5 w-5 text-primary-foreground" />
+                <Flame className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold">LaunchPad</span>
+              <span className="text-xl font-bold font-mono tracking-tight">fuckpump.fun</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              The premier platform for launching and trading memecoins.
+              Memecoin launchpad. No mercy. Pump or get rekt.
             </p>
           </div>
 
@@ -105,7 +105,7 @@ export function Footer() {
         <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} LaunchPad. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} fuckpump.fun. No rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/terms" className="hover:text-foreground transition-colors">
               Terms

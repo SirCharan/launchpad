@@ -24,25 +24,25 @@ const phaseConfig: Record<
     label: 'Upcoming',
     icon: Clock,
     className:
-      'bg-blue-500/10 text-blue-500 border-blue-500/20 hover:bg-blue-500/20',
+      'bg-chart-2/20 text-chart-2 border-chart-2/30 hover:bg-chart-2/30',
   },
   live: {
-    label: 'Live',
+    label: 'LIVE',
     icon: Flame,
     className:
-      'bg-green-500/10 text-green-500 border-green-500/20 hover:bg-green-500/20 animate-pulse',
+      'bg-primary/20 text-primary border-primary/40 hover:bg-primary/30 animate-pulse font-mono',
   },
   settling: {
     label: 'Settling',
     icon: Loader2,
     className:
-      'bg-yellow-500/10 text-yellow-500 border-yellow-500/20 hover:bg-yellow-500/20',
+      'bg-chart-4/20 text-chart-4 border-chart-4/30 hover:bg-chart-4/30',
   },
   completed: {
-    label: 'Trading',
+    label: 'ENDED',
     icon: CheckCircle2,
     className:
-      'bg-primary/10 text-primary border-primary/20 hover:bg-primary/20',
+      'bg-destructive/20 text-destructive border-destructive/30 hover:bg-destructive/30 font-mono',
   },
 };
 

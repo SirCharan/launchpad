@@ -1,7 +1,7 @@
 'use client';
 
 import {useState, useEffect} from 'react';
-import {Flame, Clock, TrendingUp, Sparkles, Rocket} from 'lucide-react';
+import {Flame, Clock, TrendingUp, Zap} from 'lucide-react';
 import Link from 'next/link';
 import {Container} from '~/components/layout';
 import {TokenList, TokenFiltersBar} from '~/components/token';
@@ -11,8 +11,8 @@ import {cn} from '~/lib/utils';
 import type {TokenWithStats, TokenFilters, AuctionPhase} from '~/types';
 
 const QUICK_FILTERS = [
-  {id: 'all', label: 'All', icon: Sparkles},
-  {id: 'live', label: 'Live Auctions', icon: Flame},
+  {id: 'all', label: 'All', icon: Zap},
+  {id: 'live', label: 'Live', icon: Flame},
   {id: 'upcoming', label: 'Upcoming', icon: Clock},
   {id: 'completed', label: 'Trading', icon: TrendingUp},
 ] as const;
@@ -104,14 +104,14 @@ export default function DiscoverPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <div>
-            <h1 className="text-2xl font-bold">Discover</h1>
+            <h1 className="text-2xl font-bold font-mono">Discover</h1>
             <p className="text-sm text-muted-foreground mt-0.5">
-              Find tokens and live auctions
+              Find tokens. Live auctions. No mercy.
             </p>
           </div>
           <Link href="/launch">
-            <Button size="sm" className="gap-1.5">
-              <Rocket className="h-3.5 w-3.5" />
+            <Button size="sm" className="gap-1.5 font-medium">
+              <Flame className="h-3.5 w-3.5" />
               Launch Token
             </Button>
           </Link>
@@ -174,9 +174,9 @@ export default function DiscoverPage() {
           filters.phase === 'live' && (
             <div className="text-center py-12">
               <Flame className="h-10 w-10 text-muted-foreground/50 mx-auto mb-3" />
-              <p className="font-medium">No live auctions</p>
+              <p className="font-medium font-mono">No live auctions</p>
               <p className="text-sm text-muted-foreground mt-1">
-                Be the first to launch a fair auction
+                Be the first. Launch. Pump or get rekt.
               </p>
               <Link href="/launch" className="inline-block mt-4">
                 <Button variant="outline" size="sm">

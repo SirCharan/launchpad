@@ -310,9 +310,9 @@ export function BidCard({
 
         {/* Early bidder tip */}
         {isLive && state.progress < 50 && (
-          <div className="flex items-start gap-2 p-2.5 rounded-lg bg-green-500/10 border border-green-500/20">
-            <Zap className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-            <p className="text-xs text-green-600 dark:text-green-400">
+          <div className="flex items-start gap-2 p-2.5 rounded-lg bg-primary/10 border border-primary/20">
+            <Zap className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+            <p className="text-xs text-primary">
               Early bidders get better average prices as bids spread across more
               blocks
             </p>
@@ -345,7 +345,7 @@ export function BidCard({
                 <p
                   className={cn(
                     'font-medium',
-                    userBid.inRange ? 'text-green-500' : 'text-yellow-500',
+                    userBid.inRange ? 'text-primary' : 'text-chart-4',
                   )}
                 >
                   {userBid.inRange ? 'In Range' : 'Out of Range'}

@@ -44,10 +44,10 @@ export function AuctionProgress({config, state, className}: AuctionProgressProps
         <div
           className={cn(
             'h-full rounded-full transition-all duration-1000',
-            state.phase === 'live' && 'bg-green-500',
-            state.phase === 'settling' && 'bg-yellow-500',
-            state.phase === 'completed' && 'bg-primary',
-            state.phase === 'upcoming' && 'bg-blue-500'
+            state.phase === 'live' && 'bg-primary',
+            state.phase === 'settling' && 'bg-chart-4',
+            state.phase === 'completed' && 'bg-destructive',
+            state.phase === 'upcoming' && 'bg-chart-2'
           )}
           style={{width: `${state.phase === 'upcoming' ? 0 : progressPercent}%`}}
         />
