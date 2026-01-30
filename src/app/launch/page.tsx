@@ -100,13 +100,16 @@ export default function LaunchPage() {
       <Container size="sm">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 font-mono">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 uppercase tracking-wider">
             <Zap className="h-3.5 w-3.5" />
-            CCA — No snipers
+            Uniswap V4 CCA
           </div>
-          <h1 className="text-2xl font-bold font-mono">Launch Your Token</h1>
+          <h1 className="text-2xl font-bold tracking-tight">
+            Launch token
+          </h1>
           <p className="text-sm text-muted-foreground mt-1">
-            Continuous clearing auction. Fair price or rekt.
+            Create a new token with Unilaunch. Fair price discovery, then
+            trade on V4.
           </p>
         </div>
 
@@ -479,7 +482,7 @@ export default function LaunchPage() {
                   className="w-full"
                   onClick={handleConnectWallet}
                 >
-                  Connect Wallet to Launch
+                  Connect wallet to launch
                 </Button>
               )}
 
@@ -504,7 +507,7 @@ export default function LaunchPage() {
                   ) : (
                     <>
                       <Flame className="h-4 w-4" />
-                      Launch Auction
+                      Launch token
                     </>
                   )}
                 </Button>
@@ -514,8 +517,8 @@ export default function LaunchPage() {
         )}
 
         {/* Footer note */}
-        <p className="text-center text-xs text-muted-foreground mt-6 font-mono">
-          fuckpump.fun — Uniswap V4 CCA
+        <p className="text-center text-xs text-muted-foreground mt-6">
+          Unilaunch · Not financial advice.
         </p>
       </Container>
     </div>

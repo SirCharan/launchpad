@@ -107,12 +107,12 @@ export default function TokenPage() {
       <div className="py-6 md:py-8">
         <Container>
           <div className="flex flex-col items-center justify-center py-16">
-            <h1 className="text-xl font-bold font-mono">Token Not Found</h1>
+            <h1 className="text-xl font-bold">Token not found</h1>
             <p className="text-muted-foreground mt-1 text-sm">
-              Doesn't exist. Or you're rekt.
+              This token doesn&apos;t exist or the address is invalid.
             </p>
             <Link href="/discover" className="mt-4">
-              <Button>Back to Discover</Button>
+              <Button>Back to Tokens</Button>
             </Link>
           </div>
         </Container>

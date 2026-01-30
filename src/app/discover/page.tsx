@@ -104,15 +104,17 @@ export default function DiscoverPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <div>
-            <h1 className="text-2xl font-bold font-mono">Discover</h1>
+            <h1 className="text-2xl font-bold tracking-tight">
+              Tokens
+            </h1>
             <p className="text-sm text-muted-foreground mt-0.5">
-              Find tokens. Live auctions. No mercy.
+              Discover and trade tokens launched on Unilaunch.
             </p>
           </div>
           <Link href="/launch">
             <Button size="sm" className="gap-1.5 font-medium">
               <Flame className="h-3.5 w-3.5" />
-              Launch Token
+              Launch token
             </Button>
           </Link>
         </div>
@@ -174,13 +176,13 @@ export default function DiscoverPage() {
           filters.phase === 'live' && (
             <div className="text-center py-12">
               <Flame className="h-10 w-10 text-muted-foreground/50 mx-auto mb-3" />
-              <p className="font-medium font-mono">No live auctions</p>
+              <p className="font-medium">No live auctions</p>
               <p className="text-sm text-muted-foreground mt-1">
-                Be the first. Launch. Pump or get rekt.
+                Launch your token to get started.
               </p>
               <Link href="/launch" className="inline-block mt-4">
                 <Button variant="outline" size="sm">
-                  Launch Token
+                  Launch token
                 </Button>
               </Link>
             </div>

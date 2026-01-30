@@ -6,7 +6,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -46,75 +46,75 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-/* Neon Apocalypse palette — light (:root) still dark-ish for consistency */
+/* Uniswap design system: Light theme (white + pink #FF007A) */
 :root {
-  --radius: 0.375rem;
-  --background: oklch(0.08 0.01 280);
-  --foreground: oklch(0.97 0.01 280);
-  --card: oklch(0.14 0.03 290);
-  --card-foreground: oklch(0.97 0.01 280);
-  --popover: oklch(0.14 0.03 290);
-  --popover-foreground: oklch(0.97 0.01 280);
-  --primary: oklch(0.91 0.16 195);
-  --primary-foreground: oklch(0.08 0.01 280);
-  --secondary: oklch(0.2 0.04 290);
-  --secondary-foreground: oklch(0.97 0.01 280);
-  --muted: oklch(0.16 0.03 290);
-  --muted-foreground: oklch(0.6 0.04 290);
-  --accent: oklch(0.65 0.28 340);
-  --accent-foreground: oklch(0.99 0 0);
-  --destructive: oklch(0.63 0.25 25);
-  --border: oklch(0.28 0.04 290);
-  --input: oklch(0.3 0.04 290);
-  --ring: oklch(0.91 0.16 195);
-  --chart-1: oklch(0.91 0.16 195);
-  --chart-2: oklch(0.65 0.28 340);
-  --chart-3: oklch(0.6 0.2 290);
-  --chart-4: oklch(0.78 0.18 75);
-  --chart-5: oklch(0.7 0.2 145);
-  --sidebar: oklch(0.14 0.03 290);
-  --sidebar-foreground: oklch(0.97 0.01 280);
-  --sidebar-primary: oklch(0.91 0.16 195);
-  --sidebar-primary-foreground: oklch(0.08 0.01 280);
-  --sidebar-accent: oklch(0.2 0.04 290);
-  --sidebar-accent-foreground: oklch(0.97 0.01 280);
-  --sidebar-border: oklch(0.28 0.04 290);
-  --sidebar-ring: oklch(0.91 0.16 195);
+  --radius: 0.75rem;
+  --background: #F7F8FA;
+  --foreground: #0D0D0D;
+  --card: #FFFFFF;
+  --card-foreground: #171717;
+  --popover: #FFFFFF;
+  --popover-foreground: #171717;
+  --primary: #FF007A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #737373;
+  --secondary-foreground: #0D0D0D;
+  --muted: #F0F0F0;
+  --muted-foreground: #525252;
+  --accent: #FF007A;
+  --accent-foreground: #FFFFFF;
+  --destructive: #ef4444;
+  --border: #E0E0E0;
+  --input: #E5E5E5;
+  --ring: #FF007A;
+  --chart-1: #FF007A;
+  --chart-2: #e6006e;
+  --chart-3: #cc0062;
+  --chart-4: #99004a;
+  --chart-5: #660033;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #171717;
+  --sidebar-primary: #FF007A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F0F0F0;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #E0E0E0;
+  --sidebar-ring: #FF007A;
 }
 
+/* Uniswap design system: Dark theme (black + pink #FF007A) */
 .dark {
-  /* Neon Apocalypse: neon cyan, hot pink, purple on black */
-  --background: oklch(0.06 0.015 280);
-  --foreground: oklch(0.97 0.01 280);
-  --card: oklch(0.12 0.03 290);
-  --card-foreground: oklch(0.97 0.01 280);
-  --popover: oklch(0.12 0.03 290);
-  --popover-foreground: oklch(0.97 0.01 280);
-  --primary: oklch(0.91 0.16 195);
-  --primary-foreground: oklch(0.08 0.01 280);
-  --secondary: oklch(0.2 0.04 290);
-  --secondary-foreground: oklch(0.97 0.01 280);
-  --muted: oklch(0.14 0.03 290);
-  --muted-foreground: oklch(0.6 0.04 290);
-  --accent: oklch(0.65 0.28 340);
-  --accent-foreground: oklch(0.99 0 0);
-  --destructive: oklch(0.63 0.25 25);
-  --border: oklch(0.28 0.05 290);
-  --input: oklch(0.2 0.04 290);
-  --ring: oklch(0.91 0.16 195);
-  --chart-1: oklch(0.91 0.16 195);
-  --chart-2: oklch(0.65 0.28 340);
-  --chart-3: oklch(0.6 0.2 290);
-  --chart-4: oklch(0.78 0.18 75);
-  --chart-5: oklch(0.7 0.2 145);
-  --sidebar: oklch(0.1 0.03 290);
-  --sidebar-foreground: oklch(0.97 0.01 280);
-  --sidebar-primary: oklch(0.91 0.16 195);
-  --sidebar-primary-foreground: oklch(0.08 0.01 280);
-  --sidebar-accent: oklch(0.2 0.04 290);
-  --sidebar-accent-foreground: oklch(0.97 0.01 280);
-  --sidebar-border: oklch(0.28 0.05 290);
-  --sidebar-ring: oklch(0.91 0.16 195);
+  --background: #0D0D0D;
+  --foreground: #FFFFFF;
+  --card: #1A1A1A;
+  --card-foreground: #FFFFFF;
+  --popover: #1A1A1A;
+  --popover-foreground: #FFFFFF;
+  --primary: #FF007A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #A3A3A3;
+  --secondary-foreground: #FFFFFF;
+  --muted: #252525;
+  --muted-foreground: #A3A3A3;
+  --accent: #FF007A;
+  --accent-foreground: #FFFFFF;
+  --destructive: #ef4444;
+  --border: #2C2C2C;
+  --input: #2C2C2C;
+  --ring: #FF007A;
+  --chart-1: #FF007A;
+  --chart-2: #e6006e;
+  --chart-3: #cc0062;
+  --chart-4: #99004a;
+  --chart-5: #660033;
+  --sidebar: #141414;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FF007A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #1F1F1F;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #2C2C2C;
+  --sidebar-ring: #FF007A;
 }
 
 @layer base {
@@ -124,7 +124,7 @@
   body {
     @apply bg-background text-foreground;
   }
-  /* Deranged typography — headings bolder, tighter, glitch-ready */
+  /* Uniswap-style typography — Inter, clean headings */
   h1, h2, h3, h4 {
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -135,58 +135,26 @@
   }
 }
 
-/* ——— Deranged visual layer ——— */
+/* ——— Uniswap-style visual layer ——— */
 
-/* Noise/grain overlay — full-screen, low opacity */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='white'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  opacity: 0.035;
-  pointer-events: none;
-  z-index: 9998;
-}
-
-/* Single horizontal scanline — subtle instability */
-body::after {
-  content: '';
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 40%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
-  opacity: 0.06;
-  pointer-events: none;
-  z-index: 9999;
-  animation: scanline-drift 8s ease-in-out infinite;
-}
-
-@keyframes scanline-drift {
-  0%, 100% { opacity: 0.04; transform: translateX(0); }
-  50% { opacity: 0.08; transform: translateX(0.5px); }
-}
-
-/* Glow on focus / primary — buttons and focusable elements */
+/* Glow on focus — pink ring */
 :focus-visible {
-  box-shadow: 0 0 0 2px var(--ring), 0 0 16px 4px oklch(0.91 0.16 195 / 0.28);
+  box-shadow: 0 0 0 2px var(--ring);
 }
 
-/* Primary buttons and primary-styled elements get stronger glow on focus */
+/* Primary buttons and primary-styled elements */
 [data-slot="button"]:focus-visible,
 button.bg-primary:focus-visible,
 a[class*="bg-primary"]:focus-visible {
-  box-shadow: 0 0 0 2px var(--ring), 0 0 20px 6px oklch(0.91 0.16 195 / 0.35);
+  box-shadow: 0 0 0 2px var(--ring);
 }
 
-/* Selection — neon cyan */
+/* Selection — pink */
 ::selection {
-  background: oklch(0.91 0.16 195 / 0.4);
+  background: rgb(255 0 122 / 0.3);
 }
 
-/* Scrollbar — cyan with subtle glow */
+/* Scrollbar — pink accent */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -197,42 +165,27 @@ a[class*="bg-primary"]:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.91 0.16 195 / 0.5);
+  background: rgb(255 0 122 / 0.4);
   border-radius: 4px;
-  box-shadow: 0 0 10px oklch(0.91 0.16 195 / 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.91 0.16 195 / 0.7);
-  box-shadow: 0 0 14px oklch(0.91 0.16 195 / 0.4);
+  background: rgb(255 0 122 / 0.6);
 }
 
-/* Primary glow pulse — neon CTA vibe (keep for logo/CTAs) */
+/* Primary glow pulse — subtle pink CTA */
 @keyframes primary-glow {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 oklch(0.91 0.16 195 / 0.4); }
-  50% { opacity: 0.95; box-shadow: 0 0 24px 4px oklch(0.91 0.16 195 / 0.3); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgb(255 0 122 / 0.3); }
+  50% { opacity: 0.95; box-shadow: 0 0 20px 2px rgb(255 0 122 / 0.25); }
 }
 
 .primary-glow-pulse {
   animation: primary-glow 2.5s ease-in-out infinite;
 }
 
-/* Optional: card hover — subtle neon outline */
+/* Card hover — subtle outline */
 [data-slot="card"]:hover {
-  box-shadow: 0 0 0 1px oklch(0.91 0.16 195 / 0.12);
-}
-
-/* Optional: subtle glitch on main container — very minimal */
-@keyframes glitch-shift {
-  0%, 90%, 100% { transform: translateX(0); }
-  92% { transform: translateX(-0.5px); }
-  94% { transform: translateX(0.5px); }
-  96% { transform: translateX(-0.3px); }
-  98% { transform: translateX(0.3px); }
-}
-
-.glitch-container {
-  animation: glitch-shift 6s ease-in-out infinite;
+  box-shadow: 0 0 0 1px rgb(255 0 122 / 0.15);
 }
 
 /* Collapsible animations */

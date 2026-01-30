@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {Flame} from 'lucide-react';
+import {Layers} from 'lucide-react';
 import {Separator} from '~/components/ui/separator';
 
 export function Footer() {
@@ -11,63 +11,63 @@ export function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <Flame className="h-5 w-5 text-primary-foreground" />
+                <Layers className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold font-mono tracking-tight">fuckpump.fun</span>
+              <span className="text-xl font-bold tracking-tight">
+                Unilaunch
+              </span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Memecoin launchpad. No mercy. Pump or get rekt.
+              Swap, provide liquidity, and launch tokens. Trade across 13+
+              networks with zero app fees.
             </p>
           </div>
 
           {/* Product */}
           <div>
-            <h4 className="font-semibold mb-4">Product</h4>
+            <h4 className="font-semibold mb-4 tracking-tight">
+              Product
+            </h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link href="/discover" className="hover:text-foreground transition-colors">
-                  Discover
+                  Swap
+                </Link>
+              </li>
+              <li>
+                <Link href="/discover" className="hover:text-foreground transition-colors">
+                  Pool
                 </Link>
               </li>
               <li>
                 <Link href="/launch" className="hover:text-foreground transition-colors">
-                  Launch Token
+                  Launch
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="font-semibold mb-4 tracking-tight">
+              Company
+            </h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link href="/docs" className="hover:text-foreground transition-colors">
-                  Documentation
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <Link href="/docs/guide" className="hover:text-foreground transition-colors">
-                  Getting Started
+                  Docs
                 </Link>
               </li>
               <li>
-                <Link href="/docs/faq" className="hover:text-foreground transition-colors">
-                  FAQ
-                </Link>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Blog
+                </a>
               </li>
-              <li>
-                <Link href="/docs/api" className="hover:text-foreground transition-colors">
-                  API
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Community */}
-          <div>
-            <h4 className="font-semibold mb-4">Community</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a
                   href="https://twitter.com"
@@ -78,25 +78,29 @@ export function Footer() {
                   Twitter
                 </a>
               </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="font-semibold mb-4 tracking-tight">
+              Resources
+            </h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a
-                  href="https://discord.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Discord
-                </a>
+                <Link href="/docs" className="hover:text-foreground transition-colors">
+                  Docs
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://telegram.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Telegram
-                </a>
+                <Link href="/terms" className="hover:text-foreground transition-colors">
+                  Terms
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:text-foreground transition-colors">
+                  Privacy
+                </Link>
               </li>
             </ul>
           </div>
@@ -105,7 +109,9 @@ export function Footer() {
         <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} fuckpump.fun. No rights reserved.</p>
+          <p className="text-xs md:text-sm">
+            © {new Date().getFullYear()} Unilaunch. Not financial advice.
+          </p>
           <div className="flex gap-6">
             <Link href="/terms" className="hover:text-foreground transition-colors">
               Terms
