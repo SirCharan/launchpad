@@ -11,10 +11,15 @@ interface TokenListProps {
 export function TokenList({tokens, isLoading}: TokenListProps) {
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {[...Array(6)].map((_, i) => (
-          <TokenCardSkeleton key={i} />
-        ))}
+      <div className="space-y-4">
+        <p className="text-sm text-muted-foreground font-[family-name:var(--font-creepster)]">
+          carnage loading
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[...Array(6)].map((_, i) => (
+            <TokenCardSkeleton key={i} />
+          ))}
+        </div>
       </div>
     );
   }

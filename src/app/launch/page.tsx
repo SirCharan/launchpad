@@ -5,12 +5,10 @@ import {
   CheckCircle2,
   ChevronRight,
   Clock,
-  Coins,
   ImagePlus,
   Info,
   Loader2,
   Rocket,
-  Sparkles,
 } from 'lucide-react';
 import {Container} from '~/components/layout';
 import {Button} from '~/components/ui/button';
@@ -98,15 +96,14 @@ export default function LaunchPage() {
   return (
     <div className="py-8 md:py-12 min-h-[80vh]">
       <Container size="sm">
-        {/* Header */}
+        {/* Header — fuckpump copy */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-4">
-            <Sparkles className="h-3.5 w-3.5" />
-            Fair Launch with CCA
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-4 font-[family-name:var(--font-creepster)]">
+            Launch — Launch a token
           </div>
-          <h1 className="text-2xl font-bold">Launch Your Token</h1>
-          <p className="text-sm text-muted-foreground mt-1">
-            Continuous Clearing Auction for fair price discovery
+          <h1 className="text-2xl font-bold">Launch</h1>
+          <p className="text-sm text-muted-foreground mt-1 font-[family-name:var(--font-creepster)]">
+            Create a token and run a CCA auction.
           </p>
         </div>
 
@@ -150,7 +147,7 @@ export default function LaunchPage() {
                   <Label htmlFor="name">Name</Label>
                   <Input
                     id="name"
-                    placeholder="My Token"
+                    placeholder="Token name"
                     value={form.name}
                     onChange={e => updateForm('name', e.target.value)}
                   />
@@ -159,7 +156,7 @@ export default function LaunchPage() {
                   <Label htmlFor="symbol">Symbol</Label>
                   <Input
                     id="symbol"
-                    placeholder="TOKEN"
+                    placeholder="SYMBOL"
                     value={form.symbol}
                     onChange={e =>
                       updateForm('symbol', e.target.value.toUpperCase())
@@ -173,7 +170,7 @@ export default function LaunchPage() {
                 <Label htmlFor="description">Description</Label>
                 <Textarea
                   id="description"
-                  placeholder="What's your token about?"
+                  placeholder="Short description"
                   value={form.description}
                   onChange={e => updateForm('description', e.target.value)}
                   rows={2}
@@ -212,10 +209,8 @@ export default function LaunchPage() {
                   <div className="h-16 w-16 rounded-xl border-2 border-dashed border-muted-foreground/25 flex items-center justify-center hover:border-primary/50 transition-colors cursor-pointer bg-muted/30">
                     <ImagePlus className="h-6 w-6 text-muted-foreground" />
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    Click to upload
-                    <br />
-                    PNG or JPG, max 2MB
+                  <p className="text-xs text-muted-foreground font-[family-name:var(--font-creepster)]">
+                    Upload image · PNG or JPG, max 2MB
                   </p>
                 </div>
               </div>
@@ -224,8 +219,9 @@ export default function LaunchPage() {
                 className="w-full"
                 onClick={() => setCurrentStep(2)}
                 disabled={!isStep1Valid}
+                title="Continue to auction settings"
               >
-                Continue
+                Next
                 <ChevronRight className="h-4 w-4 ml-1" />
               </Button>
             </CardContent>
@@ -236,22 +232,11 @@ export default function LaunchPage() {
         {currentStep === 2 && (
           <Card>
             <CardContent className="p-6 space-y-5">
-              {/* CCA Explainer */}
+              {/* CCA Explainer — keep Uniswap CCA named */}
               <div className="p-4 rounded-xl bg-gradient-to-br from-primary/5 to-chart-1/5 border border-primary/10">
-                <h3 className="font-medium flex items-center gap-2 mb-2">
-                  <Coins className="h-4 w-4 text-primary" />
-                  How CCA Works
-                </h3>
-                <ul className="text-xs text-muted-foreground space-y-1">
-                  <li>
-                    Tokens are sold over time at a continuous clearing price
-                  </li>
-                  <li>Early bidders get better average prices</li>
-                  <li>
-                    At the end, a Uniswap V4 pool is created at the discovered
-                    price
-                  </li>
-                </ul>
+                <p className="text-xs text-muted-foreground font-[family-name:var(--font-creepster)]">
+                  Powered by Uniswap CCA — continuous clearing auctions.
+                </p>
               </div>
 
               <div className="space-y-1.5">
@@ -371,6 +356,7 @@ export default function LaunchPage() {
                   variant="outline"
                   onClick={() => setCurrentStep(1)}
                   className="flex-1"
+                  title="Previous step"
                 >
                   Back
                 </Button>
@@ -378,8 +364,9 @@ export default function LaunchPage() {
                   onClick={() => setCurrentStep(3)}
                   disabled={!isStep2Valid}
                   className="flex-1"
+                  title="Review and launch"
                 >
-                  Continue
+                  Next
                   <ChevronRight className="h-4 w-4 ml-1" />
                 </Button>
               </div>
@@ -442,6 +429,11 @@ export default function LaunchPage() {
                 </div>
               </div>
 
+              {/* Summary — fuckpump copy */}
+              <p className="text-sm text-muted-foreground font-[family-name:var(--font-creepster)]">
+                Review your auction. Then launch.
+              </p>
+
               {/* What happens next */}
               <div className="p-4 rounded-xl border border-border bg-card">
                 <h4 className="text-sm font-medium mb-2">What happens next</h4>
@@ -478,8 +470,9 @@ export default function LaunchPage() {
                   variant="outline"
                   className="w-full"
                   onClick={handleConnectWallet}
+                  title="Connect to continue"
                 >
-                  Connect Wallet to Launch
+                  Connect wallet
                 </Button>
               )}
 
@@ -488,23 +481,25 @@ export default function LaunchPage() {
                   variant="outline"
                   onClick={() => setCurrentStep(2)}
                   className="flex-1"
+                  title="Previous step"
                 >
                   Back
                 </Button>
                 <Button
                   onClick={handleDeploy}
                   disabled={!isConnected || isDeploying}
-                  className="flex-1 gap-2"
+                  className="flex-1 gap-2 font-bold"
+                  title="Start the auction"
                 >
                   {isDeploying ? (
                     <>
                       <Loader2 className="h-4 w-4 animate-spin" />
-                      Launching...
+                      Launching…
                     </>
                   ) : (
                     <>
                       <Rocket className="h-4 w-4" />
-                      Launch Auction
+                      Launch auction
                     </>
                   )}
                 </Button>
@@ -513,9 +508,9 @@ export default function LaunchPage() {
           </Card>
         )}
 
-        {/* Footer note */}
-        <p className="text-center text-xs text-muted-foreground mt-6">
-          Powered by Uniswap V4 Continuous Clearing Auctions
+        {/* Footer note — keep Uniswap CCA */}
+        <p className="text-center text-xs text-muted-foreground mt-6 font-[family-name:var(--font-creepster)]">
+          Powered by Uniswap CCA — continuous clearing auctions.
         </p>
       </Container>
     </div>

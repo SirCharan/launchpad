@@ -12,6 +12,7 @@ interface PhaseBadgeProps {
   className?: string;
 }
 
+/* fuckpump copy: Soon / Live (red pulse) / Settling (amber) / Trading */
 const phaseConfig: Record<
   AuctionPhase,
   {
@@ -21,22 +22,22 @@ const phaseConfig: Record<
   }
 > = {
   upcoming: {
-    label: 'Upcoming',
+    label: 'Soon',
     icon: Clock,
     className:
-      'bg-blue-500/10 text-blue-500 border-blue-500/20 hover:bg-blue-500/20',
+      'bg-teal-500/10 text-teal-400 border-teal-500/20 hover:bg-teal-500/20',
   },
   live: {
     label: 'Live',
     icon: Flame,
     className:
-      'bg-green-500/10 text-green-500 border-green-500/20 hover:bg-green-500/20 animate-pulse',
+      'bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 animate-pulse',
   },
   settling: {
     label: 'Settling',
     icon: Loader2,
     className:
-      'bg-yellow-500/10 text-yellow-500 border-yellow-500/20 hover:bg-yellow-500/20',
+      'bg-amber-500/10 text-amber-500 border-amber-500/20 hover:bg-amber-500/20',
   },
   completed: {
     label: 'Trading',

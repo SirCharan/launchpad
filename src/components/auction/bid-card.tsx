@@ -129,6 +129,10 @@ export function BidCard({
 
   return (
     <Card className={cn('overflow-hidden', className)}>
+      {/* Bid card title — fuckpump copy */}
+      <div className="px-4 pt-4 pb-1">
+        <h3 className="text-lg font-semibold">Place a bid</h3>
+      </div>
       {/* Header with current price - always shown */}
       <div className="bg-gradient-to-r from-primary/10 to-chart-1/10 p-4 border-b border-border">
         <div className="flex items-center justify-between">
@@ -355,14 +359,14 @@ export function BidCard({
           </div>
         )}
 
-        {/* Action button */}
+        {/* Action button — fuckpump copy: Place bid / Raise, Connect wallet */}
         {!isConnected ? (
-          <Button className="w-full" size="lg" onClick={onConnectWallet}>
-            Connect Wallet
+          <Button className="w-full" size="lg" onClick={onConnectWallet} title="Connect to bid or swap">
+            Connect wallet
           </Button>
         ) : state.phase === 'upcoming' ? (
           <Button className="w-full" size="lg" disabled>
-            Auction Not Started
+            Auction not started
           </Button>
         ) : state.phase === 'live' ? (
           <Button
@@ -370,16 +374,17 @@ export function BidCard({
             size="lg"
             onClick={handlePlaceBid}
             disabled={!budgetUsd || !maxPriceEth}
+            title="Submit bid in auction"
           >
-            {userBid ? 'Update Bid' : 'Confirm Bid'}
+            {userBid ? 'Update bid' : 'Place bid'}
           </Button>
         ) : state.phase === 'settling' ? (
           <Button className="w-full" size="lg" disabled>
-            Auction Settling...
+            Settling…
           </Button>
         ) : (
           <Button className="w-full" size="lg" variant="outline">
-            Claim Tokens
+            Claim tokens
           </Button>
         )}
       </CardContent>

@@ -11,10 +11,10 @@ import {cn} from '~/lib/utils';
 import type {TokenWithStats, TokenFilters, AuctionPhase} from '~/types';
 
 const QUICK_FILTERS = [
-  {id: 'all', label: 'All', icon: Sparkles},
-  {id: 'live', label: 'Live Auctions', icon: Flame},
-  {id: 'upcoming', label: 'Upcoming', icon: Clock},
-  {id: 'completed', label: 'Trading', icon: TrendingUp},
+  {id: 'all', label: 'All', icon: Sparkles, title: 'Show all'},
+  {id: 'live', label: 'Live', icon: Flame, title: 'Live auctions only'},
+  {id: 'upcoming', label: 'Upcoming', icon: Clock, title: 'Starting soon'},
+  {id: 'completed', label: 'Trading', icon: TrendingUp, title: 'Auction ended, trading live'},
 ] as const;
 
 export default function DiscoverPage() {
@@ -101,18 +101,18 @@ export default function DiscoverPage() {
   return (
     <div className="py-6 md:py-8">
       <Container>
-        {/* Header */}
+        {/* Header — fuckpump copy */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <div>
             <h1 className="text-2xl font-bold">Discover</h1>
-            <p className="text-sm text-muted-foreground mt-0.5">
-              Find tokens and live auctions
+            <p className="text-sm text-muted-foreground mt-0.5 font-[family-name:var(--font-creepster)]">
+              Find tokens and live auctions.
             </p>
           </div>
           <Link href="/launch">
-            <Button size="sm" className="gap-1.5">
+            <Button size="sm" className="gap-1.5" title="Start a new token auction">
               <Rocket className="h-3.5 w-3.5" />
-              Launch Token
+              Launch
             </Button>
           </Link>
         </div>
@@ -127,6 +127,7 @@ export default function DiscoverPage() {
               <button
                 key={filter.id}
                 onClick={() => handleQuickFilter(filter.id)}
+                title={filter.title}
                 className={cn(
                   'flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap',
                   isActive
@@ -168,19 +169,19 @@ export default function DiscoverPage() {
           <TokenList tokens={filteredTokens} isLoading={isLoading} />
         </div>
 
-        {/* Empty State for Live Auctions */}
+        {/* Empty State for Live Auctions — fuckpump copy */}
         {!isLoading &&
           filteredTokens.length === 0 &&
           filters.phase === 'live' && (
             <div className="text-center py-12">
               <Flame className="h-10 w-10 text-muted-foreground/50 mx-auto mb-3" />
-              <p className="font-medium">No live auctions</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                Be the first to launch a fair auction
+              <p className="font-medium">No live auctions yet.</p>
+              <p className="text-sm text-muted-foreground mt-1 font-[family-name:var(--font-creepster)]">
+                Be the first to launch.
               </p>
               <Link href="/launch" className="inline-block mt-4">
-                <Button variant="outline" size="sm">
-                  Launch Token
+                <Button variant="outline" size="sm" title="Launch your token">
+                  Launch
                 </Button>
               </Link>
             </div>

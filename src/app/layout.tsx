@@ -1,23 +1,25 @@
 import type {Metadata} from 'next';
-import {Geist, Geist_Mono} from 'next/font/google';
+import {Orbitron, Creepster} from 'next/font/google';
 import {Navbar, Footer} from '~/components/layout';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const orbitron = Orbitron({
+  variable: '--font-orbitron',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const creepster = Creepster({
+  variable: '--font-creepster',
   subsets: ['latin'],
+  weight: '400',
 });
 
 export const metadata: Metadata = {
-  title: 'LaunchPad - Memecoin Launchpad',
+  title: 'fuckpump — Uniswap CCA',
   description:
-    'The premier platform for launching and trading memecoins. Create, launch, and trade tokens with ease.',
-  keywords: ['memecoin', 'launchpad', 'crypto', 'defi', 'token'],
+    'Continuous Clearing Auctions. Discover auctions, place bids, and claim tokens. DeFi native, fully onchain.',
+  keywords: ['fuckpump', 'CCA', 'Uniswap', 'auction', 'token', 'defi', 'onchain'],
 };
 
 export default function RootLayout({
@@ -28,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background font-sans`}
+        className={`${orbitron.variable} ${creepster.variable} antialiased min-h-screen bg-background font-sans`}
       >
         <div className="relative flex min-h-screen flex-col">
           <Navbar />

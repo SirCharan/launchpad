@@ -87,6 +87,9 @@ export default function TokenPage() {
     return (
       <div className="py-6 md:py-8">
         <Container>
+          <p className="text-sm text-muted-foreground mb-6 font-[family-name:var(--font-creepster)]">
+            carnage loading
+          </p>
           <Skeleton className="h-6 w-24 mb-6" />
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             <div className="lg:col-span-3 space-y-4">
@@ -107,12 +110,12 @@ export default function TokenPage() {
       <div className="py-6 md:py-8">
         <Container>
           <div className="flex flex-col items-center justify-center py-16">
-            <h1 className="text-xl font-bold">Token Not Found</h1>
-            <p className="text-muted-foreground mt-1 text-sm">
-              This token doesn't exist.
+            <h1 className="text-xl font-bold font-[family-name:var(--font-creepster)]">Token not found</h1>
+            <p className="text-muted-foreground mt-1 text-sm font-[family-name:var(--font-creepster)]">
+              This token doesn&apos;t exist or was removed.
             </p>
             <Link href="/discover" className="mt-4">
-              <Button>Back to Discover</Button>
+              <Button title="Back to discover">Discover</Button>
             </Link>
           </div>
         </Container>
@@ -127,9 +130,9 @@ export default function TokenPage() {
   return (
     <div className="py-6 md:py-8">
       <Container>
-        {/* Back button */}
+        {/* Back button — fuckpump copy */}
         <Link href="/discover" className="inline-block mb-4">
-          <Button variant="ghost" size="sm" className="gap-1.5 -ml-2 h-8">
+          <Button variant="ghost" size="sm" className="gap-1.5 -ml-2 h-8" title="Back to discover">
             <ArrowLeft className="h-3.5 w-3.5" />
             Back
           </Button>
@@ -314,8 +317,8 @@ export default function TokenPage() {
                 <TabsContent value="chart" className="m-0">
                   <div className="p-4 pt-2">
                     <div className="h-[280px] flex items-center justify-center bg-muted/30 rounded-lg">
-                      <p className="text-sm text-muted-foreground">
-                        Chart placeholder
+                      <p className="text-sm text-muted-foreground font-[family-name:var(--font-creepster)]">
+                        No chart data yet.
                       </p>
                     </div>
                   </div>
@@ -324,8 +327,8 @@ export default function TokenPage() {
                 <TabsContent value="activity" className="m-0">
                   <div className="p-4 pt-2 max-h-[320px] overflow-auto">
                     {trades.length === 0 ? (
-                      <div className="h-[280px] flex items-center justify-center text-muted-foreground text-sm">
-                        No activity yet
+                      <div className="h-[280px] flex items-center justify-center text-muted-foreground text-sm font-[family-name:var(--font-creepster)]">
+                        No activity yet.
                       </div>
                     ) : (
                       <div className="space-y-2">
@@ -366,8 +369,8 @@ export default function TokenPage() {
 
                 <TabsContent value="about" className="m-0">
                   <div className="p-4 pt-2">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {token.description || 'No description available.'}
+                    <p className="text-sm text-muted-foreground leading-relaxed font-[family-name:var(--font-creepster)]">
+                      {token.description || 'No description.'}
                     </p>
                     <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
                       <div className="p-3 rounded-lg bg-muted/30">

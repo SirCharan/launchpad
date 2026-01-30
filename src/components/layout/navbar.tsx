@@ -28,27 +28,28 @@ export function Navbar({onConnectWallet, isConnected, address}: NavbarProps) {
     : null;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-black/90 backdrop-blur-lg">
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        {/* Logo — fuckpump brand */}
+        <Link href="/" className="flex items-center gap-2" title="fuckpump">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
             <Rocket className="h-4 w-4 text-primary-foreground" />
           </div>
-          <span className="text-lg font-bold hidden sm:block">Timelock</span>
+          <span className="text-lg font-bold hidden sm:block">fuckpump</span>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation — Discover / Launch */}
         <nav className="hidden md:flex items-center gap-1">
           {NAV_LINKS.map(link => (
             <Link
               key={link.href}
               href={link.href}
+              title={link.href === '/discover' ? 'Browse tokens and auctions' : 'Start a token auction'}
               className={cn(
-                'px-3 py-1.5 rounded-md text-sm font-medium transition-colors',
+                'px-3 py-1.5 rounded-md text-sm font-medium transition-colors border-b-2 border-transparent',
                 pathname === link.href
-                  ? 'bg-muted text-foreground'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/50',
+                  ? 'text-primary border-primary'
+                  : 'text-muted-foreground hover:text-primary',
               )}
             >
               {link.label}
@@ -56,16 +57,17 @@ export function Navbar({onConnectWallet, isConnected, address}: NavbarProps) {
           ))}
         </nav>
 
-        {/* Wallet Button */}
+        {/* Wallet Button — Connect wallet */}
         <div className="hidden md:flex items-center">
           <Button
             variant={isConnected ? 'outline' : 'default'}
             size="sm"
             onClick={onConnectWallet}
             className="gap-1.5 h-8"
+            title={isConnected ? 'Connected' : 'Connect wallet'}
           >
             <Wallet className="h-3.5 w-3.5" />
-            {isConnected ? truncatedAddress : 'Connect'}
+            {isConnected ? truncatedAddress : 'Connect wallet'}
           </Button>
         </div>
 
@@ -99,9 +101,10 @@ export function Navbar({onConnectWallet, isConnected, address}: NavbarProps) {
                 variant={isConnected ? 'outline' : 'default'}
                 onClick={onConnectWallet}
                 className="gap-2 w-full mt-2"
+                title={isConnected ? 'Connected' : 'Connect wallet'}
               >
                 <Wallet className="h-4 w-4" />
-                {isConnected ? truncatedAddress : 'Connect Wallet'}
+                {isConnected ? truncatedAddress : 'Connect wallet'}
               </Button>
             </div>
           </SheetContent>

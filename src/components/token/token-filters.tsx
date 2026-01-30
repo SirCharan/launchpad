@@ -28,7 +28,7 @@ export function TokenFiltersBar({
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
-          placeholder="Search tokens..."
+          placeholder="Search tokens…"
           value={filters.search ?? ''}
           onChange={e => onFiltersChange({...filters, search: e.target.value})}
           className="pl-9 h-9"
@@ -68,9 +68,9 @@ export function TokenFiltersBar({
             })
           }
         >
-          <SelectTrigger className="w-[130px] h-9">
-            <SelectValue placeholder="Sort by" />
-          </SelectTrigger>
+            <SelectTrigger className="w-[130px] h-9" title="Sort by">
+              <SelectValue placeholder="Sort by" />
+            </SelectTrigger>
           <SelectContent>
             {SORT_OPTIONS.map(option => (
               <SelectItem key={option.value} value={option.value}>

@@ -91,7 +91,7 @@ export function SwapCard({
       )}
 
       <div className="flex items-center justify-between p-4 pb-2">
-        <h3 className="text-lg font-semibold">Swap</h3>
+        <h3 className="text-lg font-semibold" title="Trade this token">Swap</h3>
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -192,12 +192,13 @@ export function SwapCard({
             size="lg"
             onClick={handleSwap}
             disabled={!amount || parseFloat(amount) <= 0}
+            title={isBuying ? 'Buy token' : 'Sell token'}
           >
             {isBuying ? 'Buy' : 'Sell'} {token.symbol}
           </Button>
         ) : (
-          <Button className="w-full" size="lg" onClick={onConnectWallet}>
-            Connect Wallet
+          <Button className="w-full" size="lg" onClick={onConnectWallet} title="Connect to bid or swap">
+            Connect wallet
           </Button>
         )}
       </CardContent>
